@@ -26,7 +26,7 @@ def execute_sql(sql, values=(), commmit=False, single=False):
         results = connection.commmit()
     else:
         results = cursor.fetchone() if single else cursor.fetchall()
-        
+
     cursor.close()
     return results
 
