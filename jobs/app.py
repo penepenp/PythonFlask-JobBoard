@@ -19,6 +19,7 @@ def open_connection():
 #add 4 parametes  sql, values, commit and single. values is set to empty tuple()
 #asssign the return value to a variable called a cursor
 # if commit is true, assign var results to return func connection.commit()
+
 def execute_sql(sql, values=(), commmit=False, single=False):
     connection = open_connection()
     cursor = connection.execute(sql, values)
