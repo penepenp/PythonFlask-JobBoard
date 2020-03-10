@@ -20,11 +20,11 @@ def open_connection():
 #asssign the return value to a variable called a cursor
 # if commit is true, assign var results to return func connection.commit()
 
-def execute_sql(sql, values=(), commmit=False, single=False):
+def execute_sql(sql, values=(), commit=False, single=False):
     connection = open_connection()
     cursor = connection.execute(sql, values)
     if commit == True:
-        results = connection.commmit()
+        results = connection.commit()
     else:
         results = cursor.fetchone() if single else cursor.fetchall()
 
